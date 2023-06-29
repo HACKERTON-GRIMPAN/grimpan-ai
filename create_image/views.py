@@ -11,8 +11,7 @@ def user_list(request):
     if request.method == 'POST': # POST 방식일 때
         data = JSONParser().parse(request) # 요청들어온 데이터를 JSON 타입으로 파싱
         
-        KAKAO_API_KEY = 'c3aa6fa36b6927a09b25673f6847c64b'
-        karlo = Karlo(service_key = KAKAO_API_KEY)
+        karlo = Karlo(service_key = data["key"])
 
         # Token 값 들고오기
         tokens = data["tokens"]
@@ -37,7 +36,7 @@ def user_list(request):
             img_temp = karlo.string_to_image(base64_string = img_str, mode = 'RGBA')
             img_temp.save(name_temp)
 
-        return JsonResponse(nameList, safe=False)
+        return JsonResponse({"names": nameList}, safe=False)
     
 
 #Karlo에게 이미지 생성 요청
