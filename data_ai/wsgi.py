@@ -1,5 +1,5 @@
 """
-WSGI config for data_ai project.
+WSGI config for AI_api project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

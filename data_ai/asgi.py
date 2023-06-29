@@ -1,5 +1,5 @@
 """
-ASGI config for data_ai project.
+ASGI config for AI_api project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
