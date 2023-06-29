@@ -30,7 +30,7 @@ def user_list(request):
             uuid_name = uuid.uuid1()
             nameList.append({"name": '{}.png'.format(uuid_name)})
             
-            name_temp = 'C://Users//HyungJoon//Documents//0_OSSP//resources//images//{}.png'.format(uuid_name)
+            name_temp = '//home//keps//resources//images//{}.png'.format(uuid_name)
 
             # base64 string을 이미지로 변환
             img_temp = karlo.string_to_image(base64_string = img_str, mode = 'RGBA')
